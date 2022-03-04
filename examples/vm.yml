@@ -55,4 +55,4 @@
     ntnx_vms:
       state: absent
       vm_uuid: "{{vm.vm_uuid}}"
-      register: vm
+    register: vm
