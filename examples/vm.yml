@@ -49,7 +49,7 @@
 
   - name: output of list Subnets
     debug:
-      msg: '{{ vm.status.resources.nic_list[0].ip_endpoint_list[0].ip }}'
+      msg: '{{ vm.response.status.resources.nic_list[0].ip_endpoint_list[0].ip }}'
 
   # - name: delete VM
   #   ntnx_vms:
