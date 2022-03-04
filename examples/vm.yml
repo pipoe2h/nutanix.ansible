@@ -6,10 +6,10 @@
     - nutanix.ncp
   module_defaults:
     group/nutanix.ncp.ntnx:
-      nutanix_host: <host_ip>
-      nutanix_username: <user>
-      nutanix_password: <pass>
-      validate_certs: false
+      nutanix_host: "{{ nutanix_host }}"
+      nutanix_username: "{{ nutanix_username }}"
+      nutanix_password: "{{ nutanix_password }}"
+      validate_certs: "{{ validate_certs | default('false') }}"
   tasks:
   - name: Setting Variables
     set_fact:
