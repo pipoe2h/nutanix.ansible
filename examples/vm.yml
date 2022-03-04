@@ -45,14 +45,14 @@
       #   type: "cloud_init"
       #   script_path: "{{ script_path }}"
       #   is_overridable: True
-    register: output
+    register: vm
 
   - name: output of list Subnets
     debug:
-      msg: '{{ output }}'
+      msg: '{{ vm.networks }}'
 
   - name: delete VM
     ntnx_vms:
       state: absent
-      vm_uuid: "{{output.vm_uuid}}"
-      register: output
+      vm_uuid: "{{vm.vm_uuid}}"
+      register: vm
