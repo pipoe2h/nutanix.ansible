@@ -41,10 +41,10 @@
       vcpus: 1
       cores_per_vcpu: 1
       memory_gb: 1
-      guest_customization:
-        type: "cloud_init"
-        script_path: "{{ script_path }}"
-        is_overridable: True
+      # guest_customization:
+      #   type: "cloud_init"
+      #   script_path: "{{ script_path }}"
+      #   is_overridable: True
     register: output
 
   - name: output of list Subnets
