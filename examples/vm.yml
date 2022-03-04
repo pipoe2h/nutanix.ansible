@@ -49,7 +49,7 @@
 
   - name: output of list Subnets
     debug:
-      msg: '{{ vm.networks }}'
+      msg: '{{ vm }}'
 
   - name: delete VM
     ntnx_vms:
